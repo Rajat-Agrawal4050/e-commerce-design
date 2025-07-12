@@ -39,6 +39,8 @@
         </button>
         <!-- Navbar links -->
         <div class="collapse nav_collapse navbar-collapse" id="navbarTogglerDemo01">
+          <div class="d-flex justify-content-between navbarTogglerDemo01" style="width: 100%;">
+          <div>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="index.html">Home</a>
@@ -52,8 +54,7 @@
             <li class="nav-item">
               <a class="nav-link" href="contact.html">Contact</a>
             </li>
-
-            <div class="dropdown d-flex justify-content-center align-items-center">
+            <div class="dropdown nav-item d-flex justify-content-center align-items-center">
               <a class="dropdown-toggle" style="color: #29553c; font-weight: 400; margin-left: 8px;" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 More
               </a>
@@ -67,13 +68,17 @@
                 <li><a class="dropdown-item" href="error.html">404</a></li>
               </ul>
             </div>
+
             <li class="nav-item">
-              <button class="btn mybtn1 ml-md-2">
+              <button class="btn mybtn1 mx-3">
                 Login &nbsp; <i class="fa-solid fa-user"></i>
               </button>
             </li>
           </ul>
+        </div>
         
+          <div class="d-flex justify-content-between align-items-center">
+          <div class="cart_btn_div nav-item">
           <a class="cart_btn minicart__open--btn" href="cart.html">
             <svg xmlns="http://www.w3.org/2000/svg" width="26.51" height="23.443" viewBox="0 0 14.706 13.534">
               <g transform="translate(0 0)">
@@ -84,13 +89,17 @@
                 </g>
               </g>
             </svg>
-            <span class="items__count">02</span>
+            <span class="items__count">2</span>
           </a>
-          <button class="btn mybtn2">
+        </div>
+          <button class="btn mybtn2 nav-item">
             Search &nbsp; &nbsp;
             <i class="fa-solid fa-magnifying-glass"></i>
           </button>
         </div>
+
+        </div>
+      </div>
       </div>
     </nav>
   
@@ -108,7 +117,7 @@
 
   <div class="heading text-center mx-3">
     <h2 class="p_heading">All Products</h2>
-    <div class="" style="width: 175px; float: right; margin-right: 100px;">
+    <div class="product_sort_div" style="width: 175px; float: right; margin-right: 100px;">
     <select class="select">
       <option selected value="">Sort By :</option>
       <option value="latest">Sort By Latest</option>
@@ -125,11 +134,11 @@
 
       <div class="filters_div">
 
-    <div class="wrapper">
+    <div class="wrapper my-4">
       <header>
         <h4>Price Range</h4>
       </header>
-      <div class="price-input">
+      <div class="price-input px-4">
         <div class="field">
           <span>Min</span>
           <input type="number" class="input-min" value="2500">
@@ -149,12 +158,12 @@
       </div>
     </div>
 
-    <div class="category_div">
+    <div class="category_div mt-50">
       <header>
         <h4>Category</h4>
       </header>
       
-      <div class="category_container">
+      <div class="category_container my-3">
         <div class="mt-2">
         <input class="custom_check" type="checkbox" value="Fashion" id="category1" checked>
         <label class="custom_label" for="category1">
@@ -192,7 +201,7 @@
         <h4>Size</h4>
       </header>
       
-      <div class="size_container">
+      <div class="size_container my-3">
         <div class="mt-2">
         <input class="custom_check" type="checkbox" value="S" id="size1">
         <label class="custom_label" for="size1">
@@ -230,7 +239,7 @@
         <h4>Brand</h4>
       </header>
       
-      <div class="brand_container">
+      <div class="brand_container my-3">
         <div class="mt-2">
         <input class="custom_check" type="checkbox" value="Raymonds" id="brand1">
         <label class="custom_label" for="brand1">
@@ -676,7 +685,7 @@
 
     </div>
 
-    <div id="wrapper">
+    <div id="wrapper" class="w-100 pagination_wrapper d-flex justify-content-center align-items-center">
         <ul id="pagination">
           <li><a class="" href="#">«</a></li>
           <li><a href="#">1</a></li>
