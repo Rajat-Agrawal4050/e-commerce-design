@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Manrope:wght@200..800&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
 *,
 ::before,
 ::after {
@@ -6,21 +8,12 @@
   box-sizing: border-box;
 }
 :root {
-  --active-color: orangered;
+  --active-color: rgb(238, 39, 97);
   --div-color: #8da9d0;
   --transition: all 0.3s ease 0s;
 }
 html {
   scroll-behavior: smooth;
-}
-.header {
-  background-image: url("../img/1.jpg");
-  background-repeat: no-repeat;
-  width: 100%;
-  background-size: cover;
-  height: 88vh;
-  padding-top: 32px;
-  position: relative;
 }
 a {
   text-decoration: none;
@@ -45,7 +38,8 @@ textarea {
   outline: none;
 }
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Jost", sans-serif;
+  font-size: 18px;
   overflow-x: hidden;
 }
 a,
@@ -85,6 +79,17 @@ textarea {
 .mb-100 {
   margin-bottom: 100px;
 }
+.header {
+  background-image: url("../img/9.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-clip: ;
+  width: 100%;
+  background-size: cover;
+  height: 88vh;
+  padding-top: 32px;
+  position: relative;
+}
 .error_txt {
   display: none;
   text-align: left;
@@ -98,11 +103,11 @@ textarea {
   margin: 0 auto;
   border-radius: 50px;
   background-color: #eeeeee;
-  color: #29553c;
+  color: rgb(0, 0, 0, 0.9);
 }
 
 .navbar-brand {
-  color: #29553c;
+  color: rgb(0, 0, 0, 0.9);
   font-weight: bold;
   margin-left: 2%;
 }
@@ -131,7 +136,7 @@ textarea {
   color: #fff;
 }
 .navbar-nav .nav-item .nav-link {
-  color: #29553c;
+  color: rgb(0, 0, 0, 0.9);
   position: relative;
   transition: 0.3s;
   transform: translateX(0);
@@ -148,10 +153,10 @@ textarea {
   content: "";
   position: absolute;
   width: 0%;
-  height: 1px;
+  height: 1.5px;
   bottom: 0;
   left: 0;
-  background-color: #29553c;
+  background-color: var(--active-color);
   transition: 0.3s;
 }
 
@@ -161,11 +166,16 @@ textarea {
 .mybtn1 {
   border: none;
 }
+.mybtn1 i {
+  color: var(--active-color);
+}
 .mybtn2 {
   margin-left: 20px;
   border: none;
 }
-
+/* .mybtn2 i{
+  color: var(--active-color);
+} */
 #navbarTogglerDemo01 {
   margin-left: 2%;
   transition: all 0.4s ease;
@@ -173,21 +183,21 @@ textarea {
 
 .content {
   position: absolute;
-  top: 70%;
+  top: 58%;
   left: 2%;
 }
 .pr_col .price {
   color: #555555 !important;
 }
 .para {
-  color: #eeeeee;
+  color: rgb(0, 0, 0, 0.9);
   font-size: 24px;
   font-weight: 600;
 }
 .buy_btn {
   background-color: var(--active-color);
   padding: 12px 22px;
-  font-size: 15px;
+  font-size: 16px;
   border: 1px solid var(--active-color);
   outline: none;
   border-radius: 40px;
@@ -203,7 +213,7 @@ textarea {
   position: absolute;
   top: 10px;
   left: 20px;
-  background-color: #72a398;
+  background-color: rgb(108, 117, 125);
   color: #fff;
   width: 50px;
   height: 25px;
@@ -365,7 +375,7 @@ span {
 }
 .hover_div {
   position: absolute;
-  background-color: rgb(255, 69, 0);
+  background-color: var(--active-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -441,6 +451,8 @@ span {
 .nav_collapse {
   background-color: #eeeeee;
 }
+
+/* footer css here */
 
 footer .main-footer {
   margin-top: 50px;
@@ -555,6 +567,7 @@ footer .fa {
   border-radius: 5px;
 }
 
+/* contact page css */
 .form_wrapper {
   max-width: 400px;
 }
@@ -571,8 +584,16 @@ footer .fa {
   margin-top: 15px;
   height: 34px;
   width: 400px;
+  background-color: var(--active-color);
+  color: #fff;
+  opacity: 1;
   overflow: hidden;
   transition: all 0.2s ease-in-out;
+}
+.send-button:hover {
+  background-color: var(--active-color);
+  color: #fff;
+  opacity: 0.9;
 }
 
 .alt-send-button {
@@ -597,17 +618,16 @@ footer .fa {
   color: #212529;
 }
 .learn_more_btn {
-  background-color: gray;
-  padding: 10px 26px;
-  font-size: 14px;
+  background-color: var(--active-color);
+  color: #eeeeee;
   border: none;
   outline: none;
-  border-radius: 5px;
+  opacity: 1;
+}
+.learn_more_btn:hover {
+  background-color: var(--active-color);
   color: #eeeeee;
-  letter-spacing: 1px;
-  /* font-weight: 500; */
-  display: inline-block;
-  margin-top: 12px;
+  opacity: 0.9;
 }
 #wrapper {
   margin: 80px auto;
@@ -1478,6 +1498,9 @@ input.quantity_number {
   .learn_btn_div {
     text-align: center;
   }
+  .top_heading {
+    text-align: center;
+  }
   .content2 {
     padding: 0;
     display: flex;
@@ -1514,19 +1537,42 @@ input.quantity_number {
   .coupon__code--field__btn {
     margin: 0px auto;
   }
-  .product_details_container{
+  .product_details_container {
     margin-top: 16%;
     padding-left: 20%;
   }
-  .product_details_section ul li{
+  .product_details_section ul li {
     font-size: 15px;
   }
-  .products_checkout_wrapper{
+  .products_checkout_wrapper {
     margin-top: 80px;
-    /* padding: 0px 10%; */
     display: flex;
     justify-content: center;
     align-items: center;
-
+  }
+  .content {
+    top: 52%;
+    left: 2%;
+  }
+  .content h1 {
+    font-size: 27px;
+  }
+  .content .para {
+    font-size: 18px;
+    font-weight: normal;
+  }
+  .buy_btn {
+    background-color: var(--active-color);
+    padding: 9px 20px;
+    font-size: 15px;
+    border: 1px solid var(--active-color);
+    outline: none;
+    border-radius: 40px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    top: 20px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 500;
   }
 }
