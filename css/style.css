@@ -10,7 +10,7 @@
 :root {
   --active-color: rgb(238, 39, 97);
   --div-color: #8da9d0;
-  --transition: all 0.3s ease 0s;
+  --transition: all 0.4s ease;
 }
 html {
   scroll-behavior: smooth;
@@ -41,6 +41,7 @@ body {
   font-family: "Jost", sans-serif;
   font-size: 18px;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 a,
 button,
@@ -49,6 +50,7 @@ input,
 textarea {
   transition: var(--transition);
 }
+
 .mt-10 {
   margin-top: 10px;
 }
@@ -79,13 +81,28 @@ textarea {
 .mb-100 {
   margin-bottom: 100px;
 }
+.ml-10 {
+  margin-left: 10px;
+}
+.ml-20 {
+  margin-left: 20px;
+}
+.ml-50 {
+  margin-left: 50px;
+}
+.ml-70 {
+  margin-left: 70px;
+}
+.ml-100 {
+  margin-left: 100px;
+}
 .header {
-  background-image: url("../img/9.png");
+  background-image: url("../img/9.png"), url("../img/10.png");
   background-repeat: no-repeat;
-  background-position: center;
-  background-clip: ;
-  width: 100%;
+  background-position: center top 50px, center;
+  /* background-clip: content-box; */
   background-size: cover;
+  width: 100%;
   height: 88vh;
   padding-top: 32px;
   position: relative;
@@ -567,6 +584,10 @@ footer .fa {
   border-radius: 5px;
 }
 
+#footer ul li {
+  margin-bottom: 10px;
+}
+
 /* contact page css */
 .form_wrapper {
   max-width: 400px;
@@ -590,6 +611,7 @@ footer .fa {
   overflow: hidden;
   transition: all 0.2s ease-in-out;
 }
+
 .send-button:hover {
   background-color: var(--active-color);
   color: #fff;
@@ -1575,4 +1597,106 @@ input.quantity_number {
     letter-spacing: 1px;
     font-weight: 500;
   }
+}
+
+/* preloader css */
+.loaded {
+  display: none;
+}
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  z-index: 9999999;
+  pointer-events: none;
+}
+#loader {
+  display: block;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 120px;
+  height: 120px;
+  margin: -75px 0 0 -75px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #9370db;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+#loader:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  right: 5px;
+  bottom: 5px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #ba55d3;
+  -webkit-animation: spin 3s linear infinite;
+  animation: spin 3s linear infinite;
+}
+#loader:after {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  border-top-color: #ff00ff;
+  -webkit-animation: spin 1.5s linear infinite;
+  animation: spin 1.5s linear infinite;
+}
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+.custom_input_text:focus {
+  border: 1px solid var(--active-color);
+  box-shadow: none;
+}
+.custom_input_text + button {
+  margin-left: 0px;
+}
+.custom_input_text + button:hover {
+  background-color: var(--active-color);
+  color: #fff;
+}
+
+.form_fields label{
+  display: inline-block;
+  width: 100%;
+}
+.form_field:focus{
+  border: 1px solid var(--active-color);
+}
+.form_field:first-child{
+  padding: 20px;
 }

@@ -385,10 +385,10 @@
 
       <div class="d-flex align-content-center">
 
-        <div class="d-flex justify-content-center">
-          <button type="button" class="quantity_btn">-</button>
-<label><input type="number" class="quantity_number" value="1"></label>
-          <button type="button" class="quantity_btn">+</button>
+        <div class="quantity__box d-flex justify-content-center">
+          <button type="button" class="quantity_btn quantity__value decrease">-</button>
+<label><input type="number" min="1" class="quantity_number" value="1"></label>
+          <button type="button" class="quantity_btn quantity__value increase">+</button>
         </div>
         <button type="button" class="add_to_cart_btn">Add to Cart</button>
       </div>
@@ -756,18 +756,18 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <div class="row my-4">
+                                        <div class="row form_fields my-4">
                                             <div class="col-md-12">
-                                                <textarea class="reviews__comment--reply__textarea" placeholder="Your Comments...."></textarea>
+                                                <textarea class="reviews__comment--reply__textarea form_field" placeholder="Your Comments...."></textarea>
                                             </div> 
                                             <div class="col-md-6">
                                                 <label>
-                                                    <input class="reviews__comment--reply__input" placeholder="Your Name...." type="text">
+                                                    <input class="reviews__comment--reply__input form_field" placeholder="Your Name...." type="text">
                                                 </label>
                                             </div>  
                                             <div class="col-md-6">
                                                 <label>
-                                                    <input class="reviews__comment--reply__input" placeholder="Your Email...." type="email">
+                                                    <input class="reviews__comment--reply__input form_field" placeholder="Your Email...." type="email">
                                                 </label>
                                             </div>  
                                         </div>

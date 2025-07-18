@@ -1,11 +1,11 @@
 "use strict";
-// const preLoader = function () {
-//   let preloaderWrapper = document.getElementById("preloader");
-//   window.onload = () => {
-//     preloaderWrapper.classList.add("loaded");
-//   };
-// };
-// preLoader();
+const preLoader = function () {
+  let preloaderWrapper = document.getElementById("preloader");
+  window.onload = () => {
+    preloaderWrapper.classList.add("loaded");
+  };
+};
+ preLoader();
 const scrollTop = document.getElementById("scroll__top");
 scrollTop &&
   (scrollTop.addEventListener("click", function () {
@@ -16,6 +16,23 @@ scrollTop &&
       ? scrollTop.classList.add("active")
       : scrollTop.classList.remove("active");
   }));
+
+document.querySelectorAll('.quantity__box .quantity__value').forEach(function(btn){
+btn.addEventListener('click',function(event){
+if(event.target.classList.contains('decrease')){
+  let input_number=$(this).parent().find('input')[0];
+  let val=parseInt(input_number.value);
+  if(val>1){
+    input_number.value=val-1;
+  }
+}
+if(event.target.classList.contains('increase')){
+  let input_number=$(this).parent().find('input')[0];
+  let val = parseInt(input_number.value);
+  input_number.value=val+1;
+}
+});
+})
 
 const rangeInput = document.querySelectorAll(".range-input input"),
   priceInput = document.querySelectorAll(".price-input input"),
