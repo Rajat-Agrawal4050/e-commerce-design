@@ -125,11 +125,9 @@ const tab = function (wrapper) {
       }
     });
 };
-tab(".product__tab--one"),
-  tab(".product__tab--two"),
-  tab(".product__details--tab"),
-  tab(".product__grid--column__buttons");
+  tab(".product__details--tab");
 
+  // image slider 
 var swiper = new Swiper(".product__media--nav", {
     loop: !0,
     spaceBetween: 10,

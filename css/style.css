@@ -203,6 +203,15 @@ textarea {
   top: 58%;
   left: 2%;
 }
+.page_heading {
+  position: absolute;
+  top: 50%;
+  left: 44%;
+}
+.page_heading h2 {
+  color: var(--active-color);
+  font-size: 34px;
+}
 .pr_col .price {
   color: #555555 !important;
 }
@@ -1167,7 +1176,7 @@ input.quantity_number {
 
 /* blog details page css here */
 .product_sec1 {
-  margin-top: 80px;
+  margin-top: 62px;
 }
 .blog_details_wrapper {
   padding-left: 4%;
@@ -1577,7 +1586,7 @@ input.quantity_number {
     left: 2%;
   }
   .content h1 {
-    font-size: 27px;
+    font-size: 24px;
   }
   .content .para {
     font-size: 18px;
@@ -1596,6 +1605,15 @@ input.quantity_number {
     color: #fff;
     letter-spacing: 1px;
     font-weight: 500;
+  }
+
+  .page_heading {
+    top: 35%;
+    left: 41%;
+  }
+  .page_heading h2 {
+    color: var(--active-color);
+    font-size: 25px;
   }
 }
 
@@ -1624,7 +1642,6 @@ input.quantity_number {
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: #9370db;
-  -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
 #loader:before {
@@ -1637,7 +1654,6 @@ input.quantity_number {
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: #ba55d3;
-  -webkit-animation: spin 3s linear infinite;
   animation: spin 3s linear infinite;
 }
 #loader:after {
@@ -1650,30 +1666,13 @@ input.quantity_number {
   border-radius: 50%;
   border: 3px solid transparent;
   border-top-color: #ff00ff;
-  -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
-}
-@-webkit-keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
 }
 @keyframes spin {
   0% {
-    -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
     transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
@@ -1690,13 +1689,17 @@ input.quantity_number {
   color: #fff;
 }
 
-.form_fields label{
+.form_fields label {
   display: inline-block;
   width: 100%;
 }
-.form_field:focus{
+.form_field:focus {
   border: 1px solid var(--active-color);
 }
-.form_field:first-child{
+.form_field:first-child {
   padding: 20px;
+}
+.form_field2:focus {
+  border: 1px solid var(--active-color) !important;
+  box-shadow: none;
 }
