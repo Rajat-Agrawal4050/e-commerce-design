@@ -215,7 +215,7 @@ textarea {
 .pr_col .price {
   color: #555555 !important;
 }
-.para {
+.para_div .para {
   color: rgb(0, 0, 0, 0.9);
   font-size: 24px;
   font-weight: 600;
@@ -235,6 +235,7 @@ textarea {
   letter-spacing: 1px;
   font-weight: 600;
 }
+
 .new_div {
   position: absolute;
   top: 10px;
@@ -350,6 +351,13 @@ span {
   overflow: hidden;
   transition: all 0.3s;
 }
+.pr_col3 {
+  width: 350px;
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  transition: all 0.3s;
+}
 .img_div {
   cursor: pointer;
   height: 220px;
@@ -362,6 +370,53 @@ span {
   width: 450px;
   overflow: hidden;
   position: relative;
+}
+.img_div3 {
+  cursor: pointer;
+  height: 280px;
+  width: 320px;
+  overflow: hidden;
+  position: relative;
+}
+.calendar_div span.date3 {
+  color: #555;
+  font-size: 16px;
+}
+.pr_col3 .read_more_link {
+  color: #555;
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+.pr_col3 h5 {
+  font-weight: bold;
+  cursor: pointer;
+}
+.pr_col3 .blog_heading_link {
+  color: rgb(0, 0, 0, 0.9);
+  transition: var(--transition);
+}
+.pr_col3 .blog_heading_link:hover {
+  color: var(--active-color) !important;
+}
+.home_blog_section h2{
+  font-weight: 600;
+}
+.shop_btn2 {
+  background-color: #fff;
+  padding: 10px 30px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  transition: var(--transition);
+  color: #555;
+  margin-top: 20px;
+  font-size: 18px;
+  display: inline-block !important;
+}
+.shop_btn2:hover {
+  background-color: var(--active-color);
+  color: #fff;
 }
 .custom_input_text {
   border: 1px solid #ced4da;
@@ -478,6 +533,65 @@ span {
   background-color: #eeeeee;
 }
 
+/* banner css */
+.banner_section_wrapper {
+  position: relative;
+  width: 94.6%;
+  margin: 60px auto;
+}
+.banner_section_wrapper::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  pointer-events: none;
+}
+.banner_section_wrapper .banner_content2 {
+  display: block;
+  position: absolute;
+  top: 25%;
+  left: 4%;
+  width: 35%;
+  height: auto;
+  z-index: 10;
+}
+.banner_section_wrapper a {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+}
+.banner_section_wrapper img {
+  transition: all 1s ease;
+}
+.banner_section_wrapper a:hover img {
+  scale: 1.1;
+}
+.banner_section_wrapper p {
+  color: #fff;
+  font-size: 17px;
+  line-height: 1.58;
+  margin-bottom: 40px !important;
+}
+.banner_content_title {
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+.shop_btn {
+  background-color: var(--active-color);
+  padding: 12px 22px;
+  font-size: 16px;
+  border: 1px solid var(--active-color);
+  outline: none;
+  transition: all 0.3s ease;
+  color: #fff;
+  font-weight: normal;
+  display: inline !important;
+}
 /* footer css here */
 
 footer .main-footer {
@@ -596,6 +710,34 @@ footer .fa {
 #footer ul li {
   margin-bottom: 10px;
 }
+.newsletter_subscribe_input {
+  width: 100%;
+  border: 0;
+  outline: none;
+  height: 2.8rem;
+  background: #f2f2f2;
+  padding: 0 1rem;
+  font-weight: 600;
+  color: rgb(0, 0, 0,0.9);
+}
+.newsletter_subscribe_button{
+  width: 100%;
+  height: 2.8rem;
+  font-weight: 600;
+  background: var(--active-color);
+  border: 0;
+  outline: none;
+  padding: 0 4.5rem;
+  color: #f2f2f2;
+  margin-top: 1.3rem;
+  font-size: 20px;
+  display: block !important;
+}
+footer p{
+  font-size: 16px;
+}
+
+
 
 /* contact page css */
 .form_wrapper {
@@ -1615,6 +1757,31 @@ input.quantity_number {
     color: var(--active-color);
     font-size: 25px;
   }
+
+  .banner_section_wrapper .banner_content2 {
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+  .banner_section_wrapper img {
+    height: 20rem;
+    object-fit: cover;
+  }
+  .banner_section_wrapper p {
+    color: #fff;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 25px !important;
+  }
+  .banner_content_title {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  .shop_btn {
+    padding: 8px 18px;
+    font-size: 14px;
+  }
+
 }
 
 /* preloader css */
