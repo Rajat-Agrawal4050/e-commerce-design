@@ -97,15 +97,26 @@ textarea {
   margin-left: 100px;
 }
 .header {
-  background-image: url("../img/9.png"), url("../img/10.png");
+  /* background-image: url("../img/9.png"), url("../img/10.png");
   background-repeat: no-repeat;
-  background-position: center top 50px, center;
+  background-position: center top 50px, center; */
   /* background-clip: content-box; */
-  background-size: cover;
+  /* background-size: cover; */
+  background-color: rgb(219, 218, 215);
   width: 100%;
   height: 88vh;
   padding-top: 32px;
   position: relative;
+  margin-bottom: 120px;
+  /* border: 1px solid red; */
+}
+.header_img {
+  position: absolute;
+  top: 51px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .error_txt {
   display: none;
@@ -205,6 +216,7 @@ textarea {
 }
 .page_heading {
   position: absolute;
+  display: inline-block;
   top: 50%;
   left: 44%;
 }
@@ -399,7 +411,7 @@ span {
 .pr_col3 .blog_heading_link:hover {
   color: var(--active-color) !important;
 }
-.home_blog_section h2{
+.home_blog_section h2 {
   font-weight: 600;
 }
 .shop_btn2 {
@@ -457,6 +469,7 @@ span {
 .hover_div {
   position: absolute;
   background-color: var(--active-color);
+  /* background-color: transparent; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -718,9 +731,9 @@ footer .fa {
   background: #f2f2f2;
   padding: 0 1rem;
   font-weight: 600;
-  color: rgb(0, 0, 0,0.9);
+  color: rgb(0, 0, 0, 0.9);
 }
-.newsletter_subscribe_button{
+.newsletter_subscribe_button {
   width: 100%;
   height: 2.8rem;
   font-weight: 600;
@@ -733,11 +746,9 @@ footer .fa {
   font-size: 20px;
   display: block !important;
 }
-footer p{
+footer p {
   font-size: 16px;
 }
-
-
 
 /* contact page css */
 .form_wrapper {
@@ -1782,6 +1793,36 @@ input.quantity_number {
     font-size: 14px;
   }
 
+  .header_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* object-position: -800px 0px; */
+  }
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+  .page_heading {
+    left: 48%;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 768px) {
+  .page_heading {
+    left: 48%;
+  }
+  .header_img {
+    object-position: -550px 0px;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+  .page_heading {
+    left: 45%;
+  }
+  .header_img {
+    object-position: -650px 0px;
+  }
 }
 
 /* preloader css */

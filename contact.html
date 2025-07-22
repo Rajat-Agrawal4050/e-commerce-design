@@ -24,6 +24,7 @@
 <body>
 
   <header class="header">
+    <img src="img/9.png" class="header_img" alt="header_img">
     <nav class="navbar sticky-top mynavbar navbar-expand-lg">
       <div class="container-fluid">
         <a class="navbar-brand" href="#"> Online Shop </a>
@@ -329,39 +330,7 @@
                 return;
             }
 
-            let form_data = new FormData();
-            form_data.append('name', name);
-            form_data.append('email', email);
-            form_data.append('message', message);
-
-            $.ajax({
-                url: "contact.php",
-                type: "post",
-                data: form_data,
-                cache: false,
-                contentType: false,
-                processData: false,
-                beforeSend: function() {
-                    $('#btn_txt').html('Sending..');
-                },
-                success: function(resp) {
-                    $('#btn_txt').html('Send');
-                    console.log(resp);
-                    if (resp.trim() == 1) {
-                        $('#name').val('');
-                        $('#email').val('');
-                        $('#message').val('');
-                        alert('Message Sent successfully.');
-
-                    } else {
-                        alert('Error: ' + resp);
-                    }
-
-                },
-                error: function(error) {
-                    console.log(error);
-                }
-            });
+            
 
         });
 
