@@ -754,7 +754,10 @@ footer .fa {
 }
 
 #footer ul li {
-  margin-bottom: 10px;
+  margin-bottom: 17px;
+}
+#footer ul li a{
+ font-size: 16px;
 }
 .newsletter_subscribe_input {
   width: 100%;
