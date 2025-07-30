@@ -254,7 +254,7 @@ li.dropdown_li:hover ul.dropdown_ul {
   left: 44%;
 }
 .page_heading h2 {
-  color: var(--active-color);
+  color: rgb(0, 0, 0, 0.9);
   font-size: 34px;
 }
 .pr_col .price {
@@ -1798,7 +1798,7 @@ input.quantity_number {
     left: 41%;
   }
   .page_heading h2 {
-    color: var(--active-color);
+    color: rgb(0, 0, 0, 0.9);
     font-size: 25px;
   }
 
@@ -1882,10 +1882,10 @@ input.quantity_number {
 
 @media (min-width: 0px) and (max-width: 576px) {
   .page_heading {
-    left: 30%;
+    left: 44%;
   }
   .header_img {
-    object-position: -770px 0px;
+    object-position: -635px 0px;
   }
 }
 
